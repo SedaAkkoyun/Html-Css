@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p1 {
+            border: 5px;
+            /* kenarlık */
+            border-style: dashed;
+            /* kenarlık stili noktalı , düz vs */
+            border-color: red;
+            /* kenarlık rengi */
+            border: dashed red 1px;
+            /* direkt tek satırın içinde de tüm özellikleri yazabılırız */
+            padding: 20px;
+            /* İç boşluk */
+            margin: 5px 30px 60px 20px;
+            /*  Dış Boşluk */
+        }
+
+        #p2 {
+            margin-top: 10px;
+            /* Üst dış boşluk */
+            margin-bottom: 20px;
+            /* alt dış boşluk */
+            margin-left: 30px;
+            /* Sol dış boşluk */
+            margin-right: 50px;
+            /* sağ dış boşluk */
+            border: 5px green solid;
+            border-width: 10px 50px;
+            /* Saat yönünde çalışır ilk değer yukarı aşağı sonraki sağ sol*/
+        }
+
+        #p3 {
+            border-top: 5px solid black;
+            /*Üst border */
+            border-right: 10px solid blue;
+            border-bottom: 5px solid red;
+            border-left: 3px solid green;
+            border: 3px solid red;
+            padding: 10px;
+            border-radius: 10px;
+            /*border kenarlarını 10px yuvarlar */
+            border-top-left-radius: 30px;
+            /* Border sol üstü yuvarlar*/
+            border-bottom-right-radius: 20px;
+            /* Border Sağ altı yuvarlar*/
+
+
+        }
+        #orta {
+
+            width: 300px;
+            background-color: cadetblue;
+            height: 300px;
+            margin: auto;/*Margin outo dedıgımız zaman otomatik ortalar */ 
+            padding: 50px;
+            padding: 60px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam iste aperiam atque aut quasi
+        similique esse ullam quia rerum corporis culpa molestias nostrum hic nihil, ipsa vitae rem. Laboriosam?</p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam iste aperiam atque aut quasi
+        similique esse ullam quia rerum corporis culpa molestias nostrum hic nihil, ipsa vitae rem. Laboriosam?</p>
+    <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam iste aperiam atque aut quasi
+        similique esse ullam quia rerum corporis culpa molestias nostrum hic nihil, ipsa vitae rem. Laboriosam?</p>
+    <div id="orta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quasi reprehenderit iusto
+        consequuntur velit voluptatum nobis, illo natus eos nulla maiores nemo commodi, ex consequatur hic eius adipisci
+        ipsa sequi.</div>
+</body>
+
+</html>
