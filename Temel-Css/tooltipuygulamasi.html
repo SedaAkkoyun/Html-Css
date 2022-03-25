@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin-top: 300px;
+            font-size: 2rem;
+        }
+ [data-tooltip]::after,[data-tooltip]::before{
+     /*Hepsinde ortak olan ozellıkler*/
+     --bccolor--:#eee;
+     position: absolute;
+     left: 50%;
+--tooltipsize--:2rem;
+ }
+        [data-tooltip] {
+            /* Data tooltip bulunan nesne direkt classıda yazabılırdik */
+            /* background-color: red; */
+            position: relative;
+            display: inline-block;
+        }
+
+        [data-tooltip]:hover::before {
+
+            /* datatooltipin üstüne gelindiğinde öncesine yazılacak */
+
+            content: attr(data-tooltip);
+            /* içeriğini datatooltip attribuitenden al */
+
+            /* position: absolute; */
+            /*İstediğimiz yere konumlandıracagımız için absolute
+            Ancak absolute yaptıgımızda tum projeyı kapsıyordu sadece datatooltipin içerisinde absolute olabılmesı ıcın datatooltipin positionuna relative verdik*/
+
+            /* top: -100%;*/
+            /* -100% yazı kendı boyutu kadar yukarı çıkar */
+
+            /* left: 50%; */
+            /* yüzde 50 sola kay dedıgımızde yazının %50sinden sonra yazacagı ıcın tam ortalamıyor  */
+
+            transform: translate(-50%, calc(-100% - var(--tooltipsize--)));
+            /* calc hesaplama yapmamızı sağlar 100de100 yukarı çık dediğimiz için her defasında data buyudukce daha cok yukarı cıkmakta bundan dolayı altındaki ok ile mesafesı sureklı degısmekte.rem değeri kullanmamızın sebebi yukarıya boslugunun sabıt kalması*/
+            /*  İçeriğin x eksende ve y ekseninde konumlanacagını belırtır (-50% içeriği tam ortala , -100% top yerıne gecer*/
+
+             background-color: var(--bccolor--);
+            color: pink;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+
+            /*  bu aşamaya kadar tooptip ortalandı ve hizalandı ancak spanin yada data tooltipin içeriği büyüdükçe ipucu alanının hizalanması bozuluyor. */
+
+            width: max-content;
+            /*Genişliği içerisindeki verinin büyüklüğü kadar olsun*/
+            max-width: 100%;
+
+
+            /*Ne değer verirsek verelim ekranı büyüttüğümüzde yada küçülttüğümüzde span içeriği 2 satıra geçtiğinde algılayıp ortalayamıyor , bunun sebebi spanın ınlıne bır yapıya sahıp olması. İnline ların genıslık yukseklık değerleri hesaplanamaz bundan dolayı datatooltipe gidip display:inline-block dedik.*/
+        }
+
+        [data-tooltip]:hover::after {
+            content: '';
+            border: calc(var(--tooltipsize--)/2) solid transparent;
+            border-top-color: var(--bccolor--);
+            /* position: absolute; */
+            top: 0;
+            /*bunu vermeseydik kendisini sureklı sona dogru konumladıgı ıcın span içerisinde gezıyordu*/
+
+            /* left: 50%; */
+
+            transform: translate(-50%, -100%);
+       width:var(--tooltipsize--) ;
+       height: var(--tooltipsize--);
+        }
+    </style>
+</head>
+
+<body>
+    <span class="tooltip" data-tooltip="Bu bir deneme tooltipidir">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem voluptates reiciendis a aspernatur dolorum. Dolore libero fuga ut excepturi dicta velit. Vitae cupiditate debitis sint aperiam inventore sunt facilis sequi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. A ipsam ullam cum, vel, perferendis architecto impedit inventore esse aliquid cupiditate id ab illo corporis veritatis voluptatum accusantium doloremque repudiandae distinctio. </span>
+
+</body>
+
+</html>
