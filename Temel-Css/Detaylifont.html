@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');*/
+        /*Bu şekilde ibaret edebiliriz ya da*/
+        @font-face {
+            /*İnternet olmazsa importtan fontu cagırması zor olur projeye yukleyıp calıstırmak ıcın bu skeılde kullanıyoruz.*/
+            font-family: seda;
+            src: url(/fonts/Lobster-Regular.ttf) format('truetype');
+            font-weight: normal;
+            font-display: swap;
+            /* yazının  yüklenmesi ile ilgili davranışlar font-display */
+
+        }
+        @font-face {
+            font-family: seda2;
+            src: url(/fonts/DancingScript-VariableFont_wght.ttf) format('truetype');
+            font-weight: normal;
+            font-display: swap;
+/* font-weight yazının boldu varsa bold regular medıum yazının içerisindeki türler */
+
+        }
+        .seda{
+            font-family: seda;
+            font-size: 2rem;
+            color: blueviolet;
+        }
+        .seda2{
+            font-family: seda2;
+            font-size: 3rem;
+            color: tomato;
+        }
+        </style>
+</head>
+<body>
+    <p class="seda">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente nam doloremque unde nostrum, sunt obcaecati incidunt et est? Doloribus commodi corrupti eius. Aperiam voluptatem nisi, consequatur a saepe sequi error?</p>
+    <p class="seda2"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, vitae fuga? Totam veritatis quibusdam tempore mollitia perspiciatis optio sint rem? Nostrum alias fugiat quam aliquid et deserunt optio dicta reiciendis.</p>
+</body>
+</html>
