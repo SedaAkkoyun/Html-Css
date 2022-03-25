@@ -1,0 +1,169 @@
+* {
+  /* Ful proje için */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/* Üst Bar İçin */
+.top-bar {
+  /* ilk menü arkaplanı ve içerisindekiler için */
+  background-color: rgb(255, 102, 102);
+  color: rgb(240, 238, 236);
+  display: flex;
+  /* div->logo ve <nav> hedef aldı */
+  align-items:center ;/*Logo ve nav classlarını ortalar */
+}
+.logo {
+  font-size: 32px;
+  padding: 0.5rem;
+  text-transform: uppercase;
+ /* background-color: skyblue;*/
+  flex-grow: 1;
+}
+.menu {
+    /*background-color: red; /*düzenlediğin alanların neresi oldugunu gormek ıcın bunu yapıyorsun */
+    flex-grow: 3; /* flex-growu logoile arasında menuyu pay etmek ıcın kullanıyorsun, Çünkü justify-content:space-arround vs. hazır olculerde bolmektedir.*/
+}
+.menu ul {
+    list-style: none;
+    display: flex; /*Menüyüde kendı ıcerısınde flexlendi */
+ /* justify-content: space-around; /* Liste olan kısımdaki linklerin arasındaki boşluklar ayarlandı*/
+
+}
+.menu ul li {
+    flex-grow: 1;/*Lilerin arasındaki boşluklar ayarlandı */
+}
+.menu ul li a {
+    font-size: 1.2rem;
+    color: inherit;
+    text-decoration: none;
+}
+/* Baner Cssleri */
+.baner{
+    background: url('photo-1643211023365-512daafa4e69.jpg') no-repeat; /*Urldekı goruntuyu koy ve goruntuyu tekrarlama */
+   /* background-color:red;/*renkleri alanları anlamak için koyuyoruz */
+   background-size: cover;
+   /*Görüntüyü sığdır. */
+
+}
+.baner-text{
+    /* background-color: green; */
+    padding: 10% 0; /*Baner-textin banera olan paddingi */
+}
+.baner-text-item{
+    /* background-color: blue; */
+    margin: auto;/*Auto demezsek 70% köşeye yaslar , auto otomatik boşluklar verir. */
+    /* baner-text-itemin -> baner-texte olan margini auto */
+    width: 70%;
+
+}
+.baner-text-item h2{
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    color:rgb(255, 102, 102);
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.baner-text-item p{
+    font-size:1rem;
+    
+    color: rgb(240, 240, 240);
+    
+    line-height: 1.5;
+    text-align: center;
+ 
+    
+}
+/* 3lü metin cssleri */
+.main-content{
+    /* background-color: blue; */
+    display: flex;
+    flex-wrap: wrap;
+  flex-direction: row;
+  padding: 2% 0;
+  justify-content: center;
+}
+.main-item{
+    max-width: 300px;
+    flex-grow: 1;
+    padding: 2%;
+    line-height: 1.5;
+    text-align: center;
+
+}
+.main-item h2{
+    color: tomato;
+    font-size: 2rem;
+  margin-bottom: 1rem;
+
+}
+.main-item p{
+    line-height: 1.5;
+}
+/* Alt form cssleri */
+.form-container{
+    background: url('photo-1643211023365-512daafa4e69.jpg') no-repeat; /*Urldekı goruntuyu koy ve goruntuyu tekrarlama */
+background-size: cover;
+    /* background-color: red; */
+    height: 500px;
+}
+.form-container h2{
+    padding:2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: tomato;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    padding: 1.2rem;
+    width: 60%;
+    margin: auto;
+    align-items: center;
+}
+.form input , .form textarea{
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    width: 90%;
+border-radius: .5rem;
+outline: none;
+border:1px solid tomato; ;
+}
+.form button{
+    background-color: tomato;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    color: rgb(255, 255, 255);
+    outline: none;
+  width: 50%;
+  border:none;
+
+}
+@media (max-width:500px){
+    .top-bar{
+        flex-direction: column;
+    }
+    .menu ul  {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu ul li {
+        margin-top: 1rem;
+        
+    }
+    .baner-text-item h2{
+        font-size: 2rem;
+    }
+    .main-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-content h2{
+        font-size: 2rem;
+    }
+    
+}
