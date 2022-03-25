@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            /* Tüm proje, tüm projenın oncesı ve sonrası */
+            box-sizing: border-box;
+        }
+
+        .my-checkbox {
+            position: absolute;
+            /*Absolute yapacagızki chechkbox kutularını ortadan kaybedelim*/
+            left: -9999px;
+            /*Boşluğu kaybolsun proje içerisinde*/
+            opacity: 0;
+            /*Hiç görünmemesi için*/
+            margin-right: 10px;
+        }
+
+        .my-checkbox+label {
+            /* Checkbaxtan sonra hemen gelen labellı seç checkboxı direkt seçemediğimiz için  */
+            cursor: pointer;
+            /*fare ımleci*/
+            display: flex;
+            align-items: center;
+            /*Flex yaptıkki tüm labelları dizsin ve ortalasın*/
+            font-size: 1.5rem;
+            /*Buraya rem verırsen kutu değerlerine de rem vermen gerekli, ancak px yada em verirsen kutu değerlerini de em vermen gereklı cunku yazı buyudukce kutu da buyumeli*/
+        }
+
+        .my-checkbox+label::before {
+            /*bu clastan sonra gelen labeldan hemen önce kutuları yerleştirecegız*/
+
+            /*ne tür birşey tasarlayacagımızı yazmamız lazım direkt block dersek labelı aşağıya atar bundan dolayı inline-block*/
+            content: '';
+            /*Content demezsek görünmez*/
+            width: 1.5rem;
+            height: 1.5rem;
+            display: inline-block;
+            border-radius: .2rem;
+            margin-right: 0.5rem;
+            /*Sola bosluk verıyorum ki yazılar arasında kalsın*/
+            border: .05rem solid black;
+        }
+
+        .my-checkbox+label:hover::before {
+            /*.my-checkbox clasından sonra gelen labelın uzerıne geldiğinde , label öncesindeki (Kutu)ya işlem yapılır.   */
+
+            background-color: #0AF;
+        }
+
+
+        .my-checkbox:focus+label::before {
+            /* checkbox focuslandığında labelden önceki */
+            box-shadow: 0 0 20px 0 black;
+        }
+
+        .my-checkbox:checked+label::before {
+            content: '\2713';
+            /*Kutu içerisine tik konuldu toptal.comdan bulabilir yada googleye html css copyright symbol yazabılırsın */
+            display: flex;
+            /*Hizaya getırebılmek ıcın flex yapıldı*/
+            justify-content: center;
+            /*Dikeyden hizası*/
+            align-items: center;
+            color: white;
+            background-color: rgb(101, 101, 219);
+        }
+
+        .my-checkbox:disabled+label::before {
+            /*aKTİF OLMAYAn checkboxlar ıcın*/
+            background-color: #ccc;
+            border-color: #999;
+        }
+
+        .my-checkbox:disabled+label {
+           
+            color: #aaa;
+            cursor: not-allowed;
+            /*Mause ustune geldıgınde secılebılır gozukmeyecek*/
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Checkboxlara direkt style veremedıgımız ıcın checkbox kutuları tasarlayacagız -->
+    <input class="my-checkbox" type="checkbox" disabled checked id="chb1" style="margin-top: 10px;">
+    <label for="chb1">Checkbox1</label>
+    <br><br>
+    <input class="my-checkbox" type="checkbox" disabled id="chb2">
+    <label for="chb2">Checkbox2</label>
+    <br><br>
+    <input class="my-checkbox" type="checkbox" id="chb3">
+    <label for="chb3">Checkbox3</label>
+    <br><br>
+    <input class="my-checkbox" type="checkbox" id="chb4">
+    <label for="chb4">Checkbox4</label>
+    <br><br>
+
+</body>
+
+</html>
