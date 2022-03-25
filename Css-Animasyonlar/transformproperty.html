@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 200px;
+            background-color: red;
+            font-size: 2rem;
+
+            transform-origin: 0% 0%;
+            /* animasyonun hangi uçtan başlayacagı 
+            0 0 karenın en sol ucu
+            0 100 en sağ ucu  gibi
+            konumu div hoverda değil divde veriyoruz*/
+        }
+        div:hover{
+            transform: translate(50%, 50%);
+            /* dönüştür->transform x ve y ekseninde hareket etmesini sağlar tek bir sayı yazarsak x eksenınde hareket eder, yüzdelik verdiğimiz zaman kendi yüzdesinin üzerinden hesaplar (100px,100px verdiğimiz 10.satır) */
+
+
+            /* transform: translateY(50px);   */
+            /* 50px y eksenınde aşağıya in */
+            transition: 2s;
+
+
+            transform: rotate(360deg);
+            /* rotate-> döndür 360 derece */
+            transform: rotate(2turn);
+            transition: 4s;
+            transform: rotate(1turn) scale(3) translate(100px);
+            /* Birden fazla animasyon kullanma şekli */
+
+
+            /* transform: scale(1.5); */
+            /* scale->ölçek 1.5 katı kendini büyüt dilersen scalex yada scaleY diyerek x ve y eksenlerınde de buyuteblırsın */
+
+            /* transform: skew(100deg); */
+            /* 2 ucundan sündürür */
+        }
+    </style>
+</head>
+<body>
+    <!-- Transformda x ve y düzleminde animasyonlar yapmaktayız -->
+    <div>DIV</div>
+</body>
+</html>
