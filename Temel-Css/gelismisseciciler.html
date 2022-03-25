@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /*Tüm Body İçerisindeki elemanlara uygular*/
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        h3 {
+            /*Tüm h3lere uygular*/
+            color: blanchedalmond;
+        }
+
+        #h2ID {
+            /*H2 idli nesneye uygular üstün specificitye sahiptir*/
+            color: blueviolet;
+        }
+
+        .paragrafsinif {
+            /*sınıfa uygular orta specificity*/
+            color: green;
+        }
+
+        /* span , p { /*Spanlara ve p lere uygular düşük specificity*/
+        /*   color:hotpink;
+        }*/
+        div p {
+            /*divin içindeki plere uygular*/
+            color: indigo;
+        }
+
+        div>span {
+            /*Divin içerisindeki spanlar*/
+            color: maroon;
+        }
+
+        h2~p {
+            /*Altgr+ü ile yapıldı işaret , h2den sonra gelen pleri kapsar*/
+            background-color: blue;
+        }
+
+        div+p {
+            /*Divden hemen sonra gelen pleri alır (divin içindeki değil)*/
+            color: white;
+        }
+
+        h3.h3sinif {
+            /*Sınıfı h3sinif olan h3ü alır*/
+            color: violet;
+
+        }
+        h2:not(.h2sinif):not(.h2222){
+            /*H2lerden sınıfı h2sinif olmayanları etkıler*/
+            /*2.notı bırden fazla sınıfa verebılecegımızı gosterebılmek için yazdım.*/
+            background-color: violet;
+        }
+input:not(:checked)/*İnputlar secılı degılse margını 25 olsun*/
+{/*Burada su sıkıntı cıkabılır text doğuştan secılebılır bır element olmadıgı ıcın ona da bu margını vermıs olursun*/
+    margin: 25px;
+
+}
+input[type="text"]{
+    /*Attributes tanımlama [] parantezleri ile olur , inputdaki textleri kapsar*/
+    background-color: yellow;
+}
+input[data-margin*="rm"]{/*içerisinde rm var ise*/
+    background-color: yellow;
+}
+input[data-margin^="em"]{/*em ile başlıyorsa*/
+    background-color: tomato;
+}
+input[data-margin$="rm"]{/*rm ile bitiyorsa*/
+    background-color: brown;
+}
+
+    </style>
+</head>
+
+<body>
+    <h2 id="h2ID" class="h2sinif">Başlık H2</h2>
+    <h2 id="h2ID" >Başlık 2 H2</h2>
+    <h3 class="h3sinif">Başlık H3</h2>
+        <p class="paragrafsinif">Paragraf1</p>
+        <p>Paragraf2</p>
+        <div>
+            div1
+            <p>Bu etkilenmeyecek</p>
+            <span>Dışarıdaki span elementi
+                <span>İçeride ki span elementi</span>
+            </span>
+            <p>Bu etkilenecek</p>
+            <span>2.span</span>
+
+        </div>
+        <input type="checkbox">
+        <input type="text">
+        <input data-margin="emreeee" type="text">
+        <p>Paragraf 3</p>
+        <p>Paragraf 4</p>
+        <div>div 2</div>
+        <p>Paragraf 5</p>
+</body>
+
+</html>
