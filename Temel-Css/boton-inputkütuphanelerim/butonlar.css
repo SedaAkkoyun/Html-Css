@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box; /*Bunu yapmak zorundayız ,
+    Butonların hepsinin boyutları margin border padding dahil olsun diye. */
+}
+.btn {
+  background-color: rgb(236, 236, 236);
+  border: 2px solid rgb(206, 206, 206);
+  outline: none;/* Dış çizgiyi kaldırmak için */
+ cursor: pointer;/* buton üstüne geldiğinde fare imlecini tıklama imleci olarak değiştirir*/
+  font-size: 2em;
+ padding: .2em .4em;/* .2em 0,2em demek */
+ border-radius: .4em;
+ /*Ölçüleri em vermemizin sebebi: em varsayılan değil içinde bulunduğu divin boyutları ile ilgiliydi,
+ Bundan dolayı içinde bulunduğu herhangi bir div kutucugunda boyutlar fontlar ile aynı oranda büyümeli */
+}
+/* Hover ustune gelindiğinde focus tıklandıktan sonra */ 
+.btn:hover , .btn:focus  {
+    background-color: rgb(219, 134, 134);
+    border: 2px solid rgb(116, 69, 69) ;
+    box-shadow:  1px 1px 5px 0 rgb(116, 69, 69)  ;
+}
+.btn2 {
+    background-color: rgb(208, 78, 50);
+    border:2px solid rgb(155, 50, 28);
+    color: wheat;
+}
+.btn2:hover{
+    background-color: wheat;
+    border:2px solid rgb(196, 116, 99);
+    color: rgb(208, 78, 50) ;
+    box-shadow:  1px 1px 5px 0 rgb(116, 69, 69)  ;
+}
+
