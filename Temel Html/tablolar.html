@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        /* table {
+         width: 100%;
+     }*/
+        table,
+        #tablo1 td,
+        #tablo1 th {
+            border: 3px solid black;
+            /*kenar çizgisi düz siyah*/
+            border-collapse: collapse;
+            /* normal şartlarda 2 çizgi çıkar iken "çünkü hem td hemde thye uyguluyorsun" collapse sıkıştır diyerek tek çizgiye çekiyorsun.
+                    unset der isen kural geçersiz olur */
+            padding: 10px;
+            /* kenar dolguları*/
+            text-align: left;
+            /* txt sola hizala*/
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+
+
+        img {
+            width: 100px;
+            height: 100 px;
+        }
+    </Style>
+</head>
+
+<body>
+
+    <table id="tablo1" style="width: 100%;">
+        <caption>Kişi Bilgisi</caption>
+        <!--Tablo Başlığı-->
+        <!-- Tablo Etiketi -->
+        <tr>
+            <!-- Her bir satır hücre verisi-->
+            <th>
+                <!-- Başlık Sütunları -->
+                Ad
+            </th>
+            <th>
+                Soyad
+            </th>
+            <th>
+                Resim
+            </th>
+            <th colspan="2">
+                <!-- Collspan "Sütunu 2ye böl demek" Bunu dediğin takdirde bu hücrenin tdsine 2 ayrı veri girmelisin-->
+                Adres
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <!--Sütun verileri -->
+                Seda
+            </td>
+            <td>
+                Akkoyun
+            </td>
+            <td>
+                <img src="27159022_yan-a50f10-680x454.jpg" alt="resim">
+            </td>
+            <td>
+                İkitelli
+            </td>
+            <td>
+                İstanbul
+            </td>
+        </tr>
+
+    </table>
+    <br>
+
+    <table id="table2" style="width: 100%;">
+        <caption>Kişi Numaraları</caption>
+        <tr>
+            <th>Name</th>
+            <td>Jill</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Phone</th>
+            <td>555-1234</td>
+        </tr>
+        <tr>
+            <td>555-8745</td>
+        </tr>
+    </table>
+</body>
+
+</html>
