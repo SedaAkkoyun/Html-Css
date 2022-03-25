@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 2rem;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blueviolet;
+            min-height: 100vh;
+            overflow: hidden;
+            /*Yan taraftaki scroolu göstermez*/
+
+        }
+
+        .btn {
+            color: white;
+            background-color: pink;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            padding: 0.5em 1em;
+            /*Dış boşluklar butonlarda em verılırki ıcerısındeki yazı buyudukce buyusun*/
+            border-radius: 0.5em;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            animation: gozkırp 500ms ease-in-out infinite, buyut 500ms ease-in-out infinite;
+            /* 500milisaniye boyunca easy in out komutu ile sürekli devam edecek animasyon */
+        }
+        .btn:focus{
+            animation: kac-git 500ms ease-in-out forwards;
+            /* forwardsı ekrandan kayboldugunda artık gozukmemesı ıcın verdık */
+        }
+
+        @keyframes gozkırp {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+            /* buton sürekli yanıp sönecek */
+
+        }
+
+        @keyframes buyut {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+
+            }
+
+            100% {
+                transform: scale(1);
+
+            }
+
+        }
+        @keyframes kac-git {
+            33%{
+transform: translate(100px,50px) rotate(30deg) scale(.9);
+/* 100px sağa 50px aşağı in bu sırada 30 derece döndür ve butonu küçült */
+            }
+            66%{
+                transform: translate(0px,25px) rotate(90deg) scale(.75);
+                /* biraz daha dön ve küçül */
+
+            }
+            100%{
+                transform: translate(0px,-25px) rotate(200deg) scale(0)
+                /* iyice dön ve ekrandan kaybol(scale 0 ) */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">Üzerime Tıkla</button>
+</body>
+
+</html>
