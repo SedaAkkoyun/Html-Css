@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu {
+            list-style-type: none;
+            /* Liste işaretleri olmasın */
+            margin: 0;
+            /* Kenar boşlukları */
+            padding: 0;
+            /* Kenar dolguları */
+            overflow: hidden;
+            /* overflow taşma , hidden gizlenmiş, blok haline getiriyor*/
+        }
+
+        #menu li {
+            padding-left: 15px;
+            /* her bir li'nin soluna 15px dolgu ver */
+            float: left;
+            /* listeler alt alta değil yan yana görünsün */
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <ol>
+        <!-- Sıralı liste order list default 1 2 3 -->
+        <li>
+            Eda
+            <ol type="A"> <!-- İç İçe Liste Örneği -->
+                <li>
+                    Eda
+                </li>
+                <li>
+                    Seda
+                </li>
+            </ol>
+        </li>
+        <li>
+            Seda
+        </li>
+        <li>
+            Gülay
+        </li>
+    </ol>
+<!--***********************************************************************************************-->
+    <ol type="A">
+        <li>
+            Eda
+        </li>
+        <li>
+            Seda
+        </li>
+        <li>
+            Gülay
+        </li>
+    </ol>
+<!--***********************************************************************************************-->
+    <ol type="a">
+        <li>
+            Eda
+        </li>
+        <li>
+            Seda
+        </li>
+        <li>
+            Gülay
+        </li>
+    </ol>
+    <!--***********************************************************************************************-->
+    <ol type="I">
+        <li>a
+            Eda
+        </li>
+        <li>
+            Seda
+        </li>
+        <li>
+            Gülay
+        </li>
+    </ol>
+    <!--***********************************************************************************************-->
+    <ol type="i">
+        <li>
+            Eda
+        </li>
+        <li>
+            Seda
+        </li>
+        <li>
+            Gülay
+        </li>
+    </ol>
+    <!--***********************************************************************************************-->
+    <ol type="1" start="22">
+        <!-- 1 2 3 diye git ama baslangıcın 22 olsun -->
+        <li>
+            Eda
+        </li>
+        <li>
+            Seda
+        </li>
+        <li>
+            Gülay
+        </li>
+    </ol>
+
+
+<!--***********************************************************************************************-->
+    <hr>
+    <!--***********************************************************************************************-->
+    <ul id="menu">
+        <li>Ana Sayfa</li>
+        <li>Hakkımızda</li>
+        <li>İletişim</li>
+    </ul>
+    <hr>
+    <!--***********************************************************************************************-->
+    <ul style="list-style-type: disc;">
+        <!--Listin stil tipi (yuvarlak kare vb.)-->
+        <!--Unordered sırasız lister-->
+        <li>
+            <!--Listele-->
+            Ankara
+        </li>
+        <li>
+
+            İstanbul
+        </li>
+        <li>
+
+            İzmir
+        </li>
+    </ul>
+<!--***********************************************************************************************-->
+    <ul style="list-style-type:circle;">
+
+        <li>
+
+            Ankara
+        </li>
+        <li>
+
+            İstanbul
+        </li>
+        <li>
+
+            İzmir
+        </li>
+    </ul>
+<!--***********************************************************************************************-->
+    <ul style="list-style-type: square;">
+
+        <li>
+
+            Ankara
+        </li>
+        <li>
+
+            İstanbul
+        </li>
+        <li>
+
+            İzmir
+        </li>
+    </ul>
+<!--***********************************************************************************************-->
+
+    <ul style="list-style-type: none;">
+
+        <li>
+
+            Ankara
+        </li>
+        <li>
+            İstanbul
+        </li>
+        <li>
+
+            İzmir
+        </li>
+    </ul>
+</body>
+
+</html>
