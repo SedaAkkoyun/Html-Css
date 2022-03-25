@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="degerlerial.html" method="get">
+        <!--Get verileri url kısmında gösterir güvenli değil post linkli sayfaya yönlendirir-->
+        <!-- Labelları her eleman ıcın tanımlamak zorundayız , <label> arasına yazdıgımız metının ustune tıkladıgımızca for="un içindeki 
+            yazıya ait idyi bulur içerisini seçili hale getirir." </label> -->
+
+        <fieldset>
+            <!--Formu düzenli set haline getirir-->
+            <label for="ad">Adınızı Giriniz; </label>
+            <input type="text" id="ad" name="ad">
+            <!--Metin kutusu-->
+            <br><br>
+            <label for="soyad">Soyadınızı Giriniz; </label>
+            <input type="text" id="soyad" name="soyad">
+            <label for="il">Şehir Giriniz; </label>
+            <!-- Data list ile liste olusturmak   -->
+            <input list="sehirler" id="il" name="il">
+
+            <datalist id="sehirler">
+                <option value="Ankara">Ankara</option>
+                <option value="İstanbul">İstanbul</option>
+                <option value="İzmir">İzmir</option>
+            </datalist>
+
+        </fieldset>
+        <!--*******************************************************-->
+        <br><br>
+        <fieldset>
+            Cinsiyet<br>
+            <label for="kadin">Kadın</label>
+            <!-- Name veri adıdır baska yerden çağıracak iken gönderilir, value gönderilen değerdir "İşaretlediğimizde ne değer döneceğidir 1 0 da yapabılırsın "-->
+            <input type="radio" name="Cinsiyet" id="kadin" value="kadin" checked="checked">
+            <label for="erkek">Erkek</label>
+            <input type="radio" name="Cinsiyet" id="erkek" value="erkek">
+            <!--Radiolarda aynı name verdıgın surece tek bır buton secebılırsın-->
+            <!--*******************************************************-->
+            <br>
+            <br>
+
+            <label for="mavi">Mavi</label>
+
+            <input type="checkbox" name="chnmv" value="Mavi" id="mavi">
+            <label for="Kırmızı">Kırmızı</label>
+            <input type="checkbox" name="chnkr" value="Kırmızı" id="Kırmızı">
+            <label for="sari">Sarı</label>
+            <input type="checkbox" name="chnsari" value="Sari" id="sari">
+            <!--*******************************************************-->
+        </fieldset>
+        <br>
+        <input type="submit" value="Gönder">
+        <br>
+        <br>
+        <input type="submit" value="gönder"><!-- Gönder butonu-->
+        <br>
+        <input type="reset" value="sil"><!-- Sil butonu-->
+        <br>
+        <input type="button" value="buton"><!-- Sil butonu-->
+        <br>
+        <label for="marka">Favori Markanız:</label>
+        <select name="arabalar" id="marka" multiple>
+            <!--Multible birden fazla buton secılebılır demek-->
+            <option value="bmw">bmw</option>
+            <option selected value="Mercedes">Mercedes</option>
+            <option value="Reno">Reno</option>
+
+        </select>
+        <br>
+        <br>
+        <label for="bio">Bio</label>
+        <textarea name="bio" id="bio" style="width: 100px; height: 100px;"></textarea>
+        <br>
+        <br><label for="adres">Adres</label>
+        <textarea name="adres" id="adres" cols="10" rows="5"></textarea>
+        <br>
+        <br>
+        <!--Button elementinin inputtan farkı içerisine resim vs elementler yazabılıyor olmamız-->
+        <!--Onclik tıklandıgında alert uyarı cıkart selam yazsın-->
+        <button type="submit" onclick="alert('Selam')">Gönder</button>
+
+        <br>
+        <hr><br>
+
+        <br>
+        <hr><br>
+        <form action="test.php" method="get" novalidate>
+            Type Text <input type="text" name="isim" readonly value="Seda Akkoyun"><br><br>
+            Type Password <input type="password"><br><br>
+            Type submit <input type="submit" formaction="deneme.php"><br><br>
+            Type Reset <input type="reset"><br><br>
+            Type button <input type="button" onclick="alert('selam')" value="Beni Tıkla"><br><br>
+            Type Color <input type="color" name="Color"><br><br>
+            Type Date <input type="date" name="tarih" min="2019-04-04" max="2022-17-01"><br><br>
+            Type email <input type="email" value="seda.akkoyun@hotmail.com" disabled name="email"><br><br>
+            Type File <input type="file" name="file" multiple><br><br>
+            Type month <input type="month" name="month" min="18" max="99"><br><br>
+            Type number <input type="number" name="numara" step="5"><br><br>
+            Type range <input type="range" name="range" min="40" max="50"><br><br>
+            Type Search <input type="search" autofocus required size="10" maxlength="10" name="search"><br><br>
+            Type Tel <input type="tel" name="tel" placeholder="666-55-55" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+            Type Time <input type="time" name="zaman"><br><br>
+            Type Url <input type="url" name="url" autocomplete><br><br>
+            Type Week <input type="week" name="week"><br><br>
+
+            <!--   value="Seda Akkoyun": Texte girdiğimiz zaman textinm içine otomatik Seda Akkoyun yazar
+        Readonly: Sadece okunabilir formata dönüştürür içerisine değişiklik yaptırmaz
+        Disabled: Read only gibi engeller fakat alanı soluk renge dönüştürür ve submit yaptığımızda 
+    disabled uygulanmış alanın değerini göndermez.
+        size="10": Karakter olarak 10 karakter sığacak boyutunda o bölümü ölçülendirir. 
+    Ancak içeriğine 10dan fazla karakter girilebilir. Sadece shape boyutunu ona göre ayarlar 
+        maxlength="10" : İlgili kutucuga en fazla 10 karakter yazılmasına ızın verır.
+        Multiple: Birden fazla seçilebilir
+        placeholder="666-55-55": metin içine soluk şekilde bunu yazar,format hk bilgi vermek amaclıdır.
+        required : o alanın doldurulması zorunlu hale gelır.
+        step="5": 5 adım olarak ilerle sayıyı 5'er 5'er arttırır ya da azaltır 
+        autofocus: sayfa ilk yüklendiğinde imleç o alanda olur
+        autocomplete: tarayıcı verıyı tahmın etmeye calısır, adrese gırdıgınde oncekı adreslerını cıkartır
+        formaction="deneme.php" : bunu herhangi bir butona özellik olarak verırsen butona tıkladıgında verılerı deneme.phpye gonderır
+        novalidate : <form > içerisine yazman gerekli, formdaki zorunlu girilmesi gereken alanları görmezden gelerek butona basıldıgında verılerı gonderır-->
+
+
+
+
+        </form>
+
+
+    </form>
+</body>
+
+</html>
