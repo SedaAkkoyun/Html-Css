@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 300px;
+            background-color:rgb(140, 140, 236) ;
+            color: white;
+            /* transition:color 1s, background-color 2s; */
+            /* coloru hoverdaki renge 1sde backgrouncolora 2s geçsin */
+            /* transition: 2s ease; */
+            /* Geçiş Şekli, 2 saniyede yavaş geçsin, Türleri istersen kendınde ayarlayabılyorsun */
+
+            transition-delay: 1s;
+            /* Bekleme süresi 1s beklesin sonra uygulasın */
+            transition-timing-function: ease-out;
+            /* Geçiş tipi yavaş girsin - çıkışı hızlı olsun gibi */
+            transition-duration: 3s;
+            /* Toplam geçiş 4s sürsün */
+            /* transition-property: color, background-color; */
+            /* Hangi elemanlara geçiş animasyonları uygulanacagı */
+            /* defaultu  transition-property: all dır*/
+            transition-property: all;
+            transition: height 2s, width 4s;
+            /* height boyutu 2s olunca width boyutu 4s geçince değişsin */
+        }
+        div:hover
+        {
+            color: black;
+            background-color: pink;
+            width: 400px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        Div
+    </div>
+</body>
+</html>
