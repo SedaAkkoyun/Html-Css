@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* İmg bir inline elementtir , yan - yana gelir */
+        .img1 {
+            width: 200px;
+            height: 300px;
+            float: left;
+        }
+
+        .img2 {
+            width: 200px;
+            height: 200px;
+            float: right;
+        }
+
+        /*P bir block eleman olduğu için altına gelir.
+        Ancak Float görünmez hale getirir elementi ve block element (p) float olan nesneleri yokmuş gibi davranır */
+        p {
+            clear: right;
+            /* clear: left;
+            clear: both; both her ıkısınınde floatını gorme anlamındadır*/
+        }
+
+        /*Clear:rigt sağdaki elementin floatını temizler ve tanımlandığı elemente(p) nesneyi artık gör ve ona göre davran anlamında bir komut uygular.
+        bundan dolayı sağı görür , block element oldugu ıcın altına geçer */
+    </style>
+</head>
+
+<body>
+    <img src="https://images.unsplash.com/photo-1638913976381-5b8ed66c36d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        alt="" class="img1">
+    <img src="https://images.unsplash.com/photo-1642716643432-c888c451f2c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
+        alt="" class="img2">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic pariatur voluptatibus optio facilis nesciunt
+        molestiae, velit vero numquam, odit totam fugiat corporis. Reprehenderit quae inventore non consectetur
+        molestiae qui. Pariatur.</p>
+</body>
+
+</html>

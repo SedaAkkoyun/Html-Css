@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* Ana arka yapı özellikleri */
+            height: 500px;
+            background-color: orange;
+            border: 1px solid black;
+            display: flex;/*İnline-flex dersek inline etiket gibi davranır, yanına inline ögeler getirebilirsiniz. */
+            /*Ana containera yazman gerekmektedir, sadece içerisindeki divler etkilenir , içindeki divlerinde içerisinde div var ise onlar etkilenmez*/
+            flex-direction: row;
+            /*flex yönü yatay yada dikey row-dikey column-yatay , row-reverse/column-reverse 1 2 3 sıralamasını 3 2 1 e cevırır*/
+            justify-content: space-around;
+            /*Flex-end tüm öğeleri sol köşeye yasla, flex-start tüm öğeleri sağ köşeye yasla , center ortala, space-arround öğe arasındaki boşlukları eşitle, space-between sağ ve sol köşedeki öğeleri köşelere yasla , space-evenly tüm boşlukları eşitle*/
+            /* align-items: flex-start; */
+            /*öğeleri hizala */
+            /* satır hizası olarak düşünür flex end dediğinde bir satırdaki kutuları aşağıya çeker */
+            /* align-content: flex-start; */
+            /*Tüm kutular için geçerli bir işlemdir, Tüm kutuları contentin aşağısına grup olarak hizalar.  Aynı şekilde space between space eventy ozellıklerı buradada vardır.*/
+            flex-wrap: wrap;
+            /* min-widthi 200 yaptıgımız için ekranı küçültünce itemlar containerin içinden taşıyor, Wrap yaptıgımız an contaınerın ıcınden tasacagını anladıgında alta atıyor ögelerden birini , wrap-reverse dersen 3 numaralı ogeyı yukarı atar*/
+
+        }
+
+        .item {
+            /* İtemlerın hepsinin ortak özellikleri  */
+            width: 200px;
+      
+            background-color: rgb(219, 219, 219);
+            margin: 10px;
+            /*Flex yapmadan önce iki alan arasındaki margin 10px ise 2 kutunun arasına 20pxlik bir margin vermez(her kutu marginini ayrı ayrı görmez üst üste ve en büyük olan margini kullanır.) Fakat flex kullandıktan sonra her kutunun kendi margini geçerlidir.Her bir kutu margini 10px işliyorsa iki kutu arasnda 20pxlk bir mesafe olur. */
+            border: 1px solid black;
+
+        }
+
+        .item1 {
+           flex-grow: 0; /*Ekran büyür ve küçülürkenki oranları hepsine 0 verip birine 1 verirsen o daha fazla buyur */
+           order: 1;
+           flex-shrink: 0;
+           align-self: flex-start;/* Sadece bu kutu için geçerli pozisyon*/
+
+        }
+
+        .item2 {
+            flex-grow: 1;
+            flex-basis: 0;/*width değerini görmezden gelir growlara gore hizalar
+
+         */
+         order: 2; /*irem sıralaması */
+         flex-shrink: 5;/*Diğerlerine göre daha hızlı daralır,daralma oranı*/ 
+         align-self: center;
+        }
+
+        .item3 {
+            flex-grow: 2;/*Glow 1 in 2 katını almaz toplam boyutu 3e boler daha sonra sabit 200px verdiğimiz için ikisininde 200pxin üstüne ekleyerek gider. */
+            flex-basis: 0;
+            order:3;
+            flex-shrink: 0;/*Hiç daralmasını ıstemıyorsam 1 veriyorum
+             */
+            align-self: flex-end;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- kısayolu  .container(.item.item${$})*3 -->
+    <div class="container">
+        <!--Ana container-->
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+    </div>
+
+
+
+</body>
+
+</html>

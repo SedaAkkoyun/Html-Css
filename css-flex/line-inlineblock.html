@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 600px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        .container {
+            width: 50%;
+            background-color: orchid;
+        }
+
+        /*div 600 verdik toplam div boyutunu 600pxe sabitledi, İçerisindeki div containerı %50ye cektık 600pxin %50sini aldı */
+        /* div bir display:block elementtir, bulunduğu alanı kaplar . */
+
+        span{
+            /*span bir inline elementtir. Bulunduğu satırı kaplamaz paragrafın dırekt ıcıne yada yanına yerlesır . tek değerdeyken width height değerleri işlemez ancak display:inline-block der isek olduğu yerde height widht değerleri verebiliriz. */
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+            background-color: orchid;
+        }
+        .btn{
+            /* Buton kendiliğinden bir inline block elementtir. display:inline-block demeden width height değerleri girebiliriz */
+            width: 150px;
+            height: 50px;
+            background-color: rgb(212, 119, 119);
+        }
+        .display-none{
+            /*display none yazana kadar gorunur haldedir.
+            None yazarsak o alan gorunmez */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="container"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus optio harum
+            consequatur libero
+            rem
+            laboriosam et nam facere quam ad voluptate veniam corrupti vitae eius ratione dicta, ab sapiente.</div>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure velit, quidem, consequuntur, dolores tempora
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum commodi, reiciendis sequi non illo
+            quibusdam soluta officiis amet labore. Modi quod cumque quibusdam recusandae id autem sed a atque
+            veniam?</span> quibusdam excepturi at libero vel illo atque nihil rem totam temporibus soluta? Ullam
+        incidunt cumque ipsam?</p>
+        <button class="btn">buraya tıklaaaa</button>
+        <p class="display-none"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, necessitatibus! Vel debitis saepe repudiandae. Alias fugit, quo cupiditate asperiores placeat ipsa magnam nostrum perspiciatis reiciendis quod assumenda! Libero, sit sed!</p>
+</body>
+
+</html>

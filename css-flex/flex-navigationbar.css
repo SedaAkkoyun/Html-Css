@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+img{
+    height: 30px;
+}
+.nav {
+  /* Bütün barın özellikleri , Ancak ul ve lilere kadar müdahale edebilir lilerin içerisindeki a hreflere giremez */
+  
+  background-color: brown;
+  color: white;
+  padding: 0 .5rem; /*yukarıdan asagıdan 0 sağdan soldan 0.5,   rem vermemiz gerekli varsayılan yazı buyudukce cevresındekı bosluklarda buyumelı */
+  display: flex;/*Flex hale getırdı ancak sadece span ve ul yapısını liye inemez bundan dolayı ul clasına da flex yapmamız gerekli */
+  align-items: center;/*span ve ulleri kapsadığıu için aynı hizaya getirdi */
+  justify-content: space-between;/*İki yana yaslar */
+}
+
+.linkler{
+    margin: 0;/*Varsayılan margini sıfırlamak için */
+    list-style: none;
+    display: flex;
+
+}
+.link{
+    padding:0 0.5rem ;
+
+}
+.link:hover{
+    background-color: rgb(141, 138, 141);
+}
+.link a{
+    text-decoration: none;/*Altı cızılı halini silmek için*/
+    color: inherit;
+}
