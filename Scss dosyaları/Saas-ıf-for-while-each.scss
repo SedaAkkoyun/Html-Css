@@ -1,0 +1,70 @@
+$sayi:20;
+p{
+    // sorgu hangı elementı kapsayacaksa onun ıcerısıne yazılması gereklı
+@if $sayi < 10 {
+    // sayı 10dan küçükse
+        background-color: red;
+   
+}
+    @else if $sayi==10{
+    
+        background-color: yellow;
+    
+}
+@else {
+    // sayı ondan kucuk veya 10a eşit değilse
+    background-color: blue;
+}
+
+
+
+@if $sayi > 10 {
+    @if $sayi < 30{
+        //  iç içe if sayı 10dan buyuk ve 30dan kucukse
+        color: teal;
+    }
+}
+@else {
+    color: purple;
+}
+}
+
+// -----------------------------------------------------
+
+
+$sayac:1;
+
+@while $sayac < 4 {
+    // sayac 4den kucuk oldugu surece asağıdakileri uygula
+    .item-#{$sayac}{
+        // yine sorgu cıktısı elemente atayacaksın .item-1 elementinin colorunu degıstır vs
+        color:lighten(red , 10*$sayac);
+        // rengi her seferinde %10*sayaç kadar aç
+        $sayac:$sayac+1;
+
+    }
+    
+}
+
+// ------------------------
+
+  @for $i from 1 to 5 {
+    //   1den 5e kadar liste olusture ve her lıstenın genıslıgı 2px*i kadar olsun
+      .list-#{$i}{
+          width: 2px*$i;
+      }
+  }
+
+
+
+//   ------------------------
+
+
+@each $deger in (normal,bold,italic) {
+    // listelerde kullanılır 3 haneli bir liste tanımladık ve içerisine verılerı yazdık
+
+    .#{$deger}{
+        font-weight: $deger;
+    }
+    
+}

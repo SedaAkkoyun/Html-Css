@@ -1,0 +1,71 @@
+$ana-renk: rgb(255, 255, 255);
+$buyuk-font: 2rem;
+$font-color: pink;
+$border: 2px solid red;
+$padding: 10px 5px;
+$yardimci-renk: purple;
+$font: Helvetica, Arial, sans-serif;
+// Değişken tanımlama şekli
+$red-map: (
+  light: rgb(236, 152, 152),
+  medium: rgb(199, 53, 53),
+  dark: rgb(107, 52, 52),
+);
+// map-get komutu içerisinde kullanılması için tanımlanan değişken, map-get bir değişkenin birden fazla versiyonu için tanımlanabilir
+
+body {
+  font-family: $font;
+  background-color: $ana-renk;
+}
+.main {
+  &-content {
+    //   & işareti bir önceki container classını yazmamayı sağlar bu şekilde yazmaz isek cssde karışıklık olusabılır
+    // main-content demek istedik
+    .p3 {
+      background-color: green;
+    }
+    .p2 {
+      background-color: aqua;
+    }
+    // scss sayesinde ana containerların bütün contentlerine bir arada tasarlayabılıyoruz
+  }
+}
+
+.p1 {
+  color: $font-color;
+  font-size: $buyuk-font;
+}
+.p2 {
+  $yardimci-renk: green;
+  color: $yardimci-renk;
+  border: $border;
+  padding: $padding;
+}
+.p3 {
+  color: map-get($red-map, light);
+
+}
+
+a {
+  font-size: 2rem;
+  &:hover {
+    //   hover, clicl gibi aksiyonlarıda bu şekilde kısa yol olarak yazabılıyoruz a:hover demek
+    color: map-get($red-map, medium);
+  }
+}
+.p4{
+    text:{
+        align:left;
+        transform: capitalize;
+        overflow: hidden;
+        // text etiketinin birden fazla alt etiketini kullanacaksak bir arada bu sekılde yazabılrıız hata gıbı gorunur ama calısır
+
+    }
+}
+a{
+    font:{
+        size: 1.5rem;
+       family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    // font etiketinin birden fazla alt etiketi için kullanıldı
+}

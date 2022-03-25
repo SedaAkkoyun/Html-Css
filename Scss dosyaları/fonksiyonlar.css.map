@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAuBA,AAAA,IAAI,AAAA,CACA,KAAK,CANO,IAAK,CAQjB,MAAM,CAAE,KAAK,CACb,KAAK,CArBG,KAAQ,CAuBhB,gBAAgB,CA5BV,IAAgB,CA6BtB,SAAS,CAxBD,IAAQ,CA0BnB",
+    "sources": [
+        "fonksiyonlar.scss"
+    ],
+    "names": [],
+    "file": "fonksiyonlar.css"
+}

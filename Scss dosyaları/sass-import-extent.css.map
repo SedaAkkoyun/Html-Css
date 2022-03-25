@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,IAAI,AAAA,CACA,gBAAgB,CDDV,IAAI,CCEb,AAEG,AAAA,YAAY,CAchB,YAAY,CAOZ,cAAc,AArBE,CACR,aAAa,CAAE,GAAG,CAClB,MAAM,CAAE,GAAG,CACd,AAkBL,AAhBI,cAgBU,AAhBE,CAER,aAAa,CAAE,GAAG,CAClB,MAAM,CAAE,GAAG,CACd,AAKL,AAAA,YAAY,CAOZ,cAAc,AAPF,CAIR,KAAK,CAAE,MAAM,CAChB,AAED,AAAA,cAAc,AAAA,CAKV,KAAK,CAAC,IAAI,CACV,SAAS,CAAE,IAAI,CAClB",
+    "sources": [
+        "sass-import-extent.scss",
+        "_degiskenler.scss",
+        "_layout.scss"
+    ],
+    "names": [],
+    "file": "sass-import-extent.css"
+}

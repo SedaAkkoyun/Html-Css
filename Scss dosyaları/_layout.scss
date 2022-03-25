@@ -1,0 +1,33 @@
+body{
+    background-color: $ana-renk;
+}
+
+    .button-base{
+        border-radius: 2px;
+        margin: 5px;
+    }
+    
+    %button-base{
+        // başına yüzde işareti koymak bu bir clas değil kod parçacıgı demektir bu kod parcacıgını dileridğin yerde @extend %button-base; diyerek çağırabilirsin
+        border-radius: 2px;
+        margin: 5px;
+    }
+    
+    
+
+
+.menu-button{
+    @extend .button-base;
+    // Button basedeki kurallar bu buton ıcınde gecerlı olsun ıstıyorum 
+    // mixin ilede çağırabilirdim ancak mixin kullanıldıgı her alan ıcın ayrı olarak kod yazar fakat excent kullanıldıgı her yerı ortak alır
+    color: purple;
+}
+
+.submit-button{
+    @extend %button-base;
+    // Kod parçacıgı cagırıldı
+    @extend .menu-button;
+    // birden fazla extend kullanılabılır
+    color:aqua;
+    font-size: 2rem;
+}

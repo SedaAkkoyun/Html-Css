@@ -1,0 +1,33 @@
+
+$bc-color:darken(#0ac ,20);
+// darken koyulaştır demek rengi %20 koyulaştırdık
+
+
+@function ikiyekatla($deger){
+    @return $deger*2;
+    // Gelen değeri 2 ile çarparak geri döndür
+}
+
+@function renkayarla($arkaplanrengi){
+    @if (lightness($arkaplanrengi)>70){
+        @return #333;
+        //lightness: renk açıklığıdır 0-100 arasında değer alır
+        // Eğer renk açıklığı 70den buyukse yani açık bir renk ise koyu renk(#333) değerini döndür 
+       }
+    @else{
+        // Eğer arka plan rengi %70den koyu bir renk ise açık renk döndür 
+        @return white;
+    }
+    
+}
+
+.div{
+    color:renkayarla($bc-color);
+    // Arkaplan rengine göre yazı rengını siyah yada beyaz yaptı
+    height: 300px; 
+    width: ikiyekatla(300px) ;
+    // Genişliği 2ye katladı
+    background-color: $bc-color;
+    font-size: ikiyekatla(2rem);
+    // Font boyutunu 2ye katladı
+}

@@ -1,0 +1,53 @@
+ul{
+    list-style-type: none;
+}
+@mixin  menu-button() {
+    // mixin sabıt kod blokları yazmak ıcın kullanılır işine yarayan yerde kod blogunu çağırmak ıcın kullanılır
+    a{
+        color: white;
+    background-color: orange;
+    margin: 5px;
+    
+    &:hover{
+        color: red;
+    }
+}
+}
+@mixin menu-button2($r:green,$bc:purple) {
+    // İstersek parametre verebılırız ve degıskenlerın yerıne kullanacagımız renk: çalışmıyorsa verdiğimiz renler
+    a{
+        color:white;
+        background-color: $bc;
+        margin: 5px;
+        
+        &:hover{
+            color: $r;
+        }
+    
+
+
+}
+}
+
+    @mixin text-icin{
+        .test{
+            color: brown;
+             @content;
+            //  .test fonksiyonunun altına artık ıcerık yazabılırız
+        }
+    }
+
+@include text-icin(){
+    font-size: 1rem;
+    // @content sayesinde daha fazla ozellık verebıldık
+}
+
+.navbar{
+    @include menu-button();
+    // include ile çağırılır
+  
+}
+.navbar2{
+    @include menu-button2(pink,yellow);
+    // parametreli bir mixin tanımladıgımız için bizim girdiğimiz renklerı kullanacak
+}

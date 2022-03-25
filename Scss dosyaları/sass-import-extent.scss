@@ -1,0 +1,58 @@
+@import 'degiskenler';
+@import 'layout';
+// büyük projeler de css dosyalarını bolumlemen ve bırbırı ıcerısınde kullanman gerekebılır bu gıbı durumlarda ımport yapmamız gereklı degiskenler dosyasının basına _ koymamız yeterli olur baska bır scss dosyası ıcerısınde cagırabılmemız ıcın
+
+// küçük bir web sitesi 3 alt 1 ana klasorden olusur , bunlar:
+// _base.scss , _layout.scss , _component.scss hepsini işlediğin klasor main.scss
+// _base.css'de reset dosyaların, değişkenler ve mixinler gibi fonksiyonları toplarsın
+
+// _layout.css containerlar ve grid yapıları yer alır
+
+// _component.css button-navbar-carts gibi hazır bulunduracağımız kodlar
+
+//  Main htmlde cagırılacak tüm kodların ıcıne işlenecegı genel yapı
+
+//  Büyük bir proje için
+// --------------------------------The7-1Pattern---------------------------
+//  sass
+// |
+// |– abstracts/ (or utilities/)
+// |   |– _variables.scss    // Sass Variables
+// |   |– _functions.scss    // Sass Functions
+// |   |– _mixins.scss       // Sass Mixins
+// |
+// |– base/
+// |   |– _reset.scss        // Reset/normalize
+// |   |– _typography.scss   // Typography rules
+// |
+// |– components/ (or modules/)
+// |   |– _buttons.scss      // Buttons
+// |   |– _carousel.scss     // Carousel
+// |   |– _slider.scss       // Slider
+// |
+// |– layout/
+// |   |– _navigation.scss   // Navigation
+// |   |– _grid.scss         // Grid system
+// |   |– _header.scss       // Header
+// |   |– _footer.scss       // Footer
+// |   |– _sidebar.scss      // Sidebar
+// |   |– _forms.scss        // Forms
+// |
+// |– pages/
+// |   |– _home.scss         // Home specific styles
+// |   |– _about.scss        // About specific styles
+// |   |– _contact.scss      // Contact specific styles
+// |
+// |– themes/
+// |   |– _theme.scss        // Default theme
+// |   |– _admin.scss        // Admin theme
+// |
+// |– vendors/
+// |   |– _bootstrap.scss    // Bootstrap
+// |   |– _jquery-ui.scss    // jQuery UI
+// |
+// `– main.scss              // Main Sass file
+//  detaylar https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4
+
+
+
