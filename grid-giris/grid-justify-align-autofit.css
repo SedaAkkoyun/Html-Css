@@ -1,0 +1,66 @@
+html,
+body {
+  background-color: saddlebrown;
+  margin: 20px;
+}
+.container div:nth-child(1n) {
+  /*1.div */
+  background-color: burlywood;
+}
+.container div:nth-child(2n) {
+  background-color: blueviolet;
+}
+.container div:nth-child(3n) {
+  background-color: cadetblue;
+}
+.container div:nth-child(4n) {
+  background-color: blueviolet;
+}
+.container div:nth-child(5n) {
+  background-color: cadetblue;
+}
+.container div:nth-child(6n) {
+  background-color: burlywood;
+}
+.container div:nth-child(7n) {
+  background-color: burlywood;
+}
+.container div:nth-child(8n) {
+  background-color: blueviolet;
+}
+.container div:nth-child(9n) {
+  background-color: cadetblue;
+}
+.container div:nth-child(10n) {
+  background-color: blueviolet;
+}
+.container div:nth-child(11n) {
+  background-color: cadetblue;
+}
+.container div:nth-child(12n) {
+  background-color: burlywood;
+}
+.container {
+  display: grid;
+  gap: 5px;
+  /************Justify Kullanma Yöntemi*****************/
+  /*   grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  justify-content: none; /* flexteki gibi tum sutunları ortalar*/
+  /* align-content: right;
+  justify-items: stretch;
+ /* align-items: left; /*satırlar ıcın ıslemler */
+  /*****************************************************/
+
+  /************ Autofill-Auto-fit /***************/
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(100px, 1fr)
+  ); /*Auto-fit sayfayı sureklı doldurur */
+  grid-template-rows: 100px 100px;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(100px, 1fr)
+  ); /*Auto fil kendi boyutuna "1fr" , geldikten sonra varolan gridleri genişletmez yanına div gelecek gıbı boşluk bırakır */
+  grid-template-rows: 100px 100px;
+}

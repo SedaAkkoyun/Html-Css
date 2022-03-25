@@ -1,0 +1,48 @@
+html,
+body {
+  background-color: saddlebrown;
+  margin: 20px;
+}
+.container div:nth-child(1n) {
+  /*1.div */
+  background-color: burlywood;
+}
+.container div:nth-child(2n) {
+  background-color: blueviolet;
+}
+.container div:nth-child(3n) {
+  background-color: cadetblue;
+}
+.container div:nth-child(4n) {
+  background-color: blueviolet;
+}
+.container div:nth-child(5n) {
+  background-color: cadetblue;
+}
+.container div:nth-child(6n) {
+  background-color: burlywood;
+}
+.container{
+    display: grid;
+    height: 100vh; /*Ekran boyutun ne olursa olsun 100de 100*/
+    gap: 5px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas: /*Alanları tasarımsal olarak bölüyorsun , harf yerine . koyarsan boşluk demektır*/
+    "m m h h"
+    "m m c c"
+    "f f f f";
+}
+.header{
+    grid-area: h;
+    
+}
+.menu{
+    grid-area:m ;
+}
+.content{
+    grid-area: c;
+}
+.footer{
+    grid-area: f;
+}

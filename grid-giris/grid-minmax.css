@@ -1,0 +1,51 @@
+html,
+body {
+  background-color: saddlebrown;
+  margin: 20px;
+}
+.container div:nth-child(1n) {
+  /*1.div */
+  background-color: burlywood;
+}
+.container div:nth-child(2n) {
+  background-color: blueviolet;
+}
+.container div:nth-child(3n) {
+  background-color: cadetblue;
+}
+.container div:nth-child(4n) {
+  background-color: blueviolet;
+}
+.container div:nth-child(5n) {
+  background-color: cadetblue;
+}
+.container div:nth-child(6n) {
+  background-color: burlywood;
+}
+.container div:nth-child(7n) {
+    
+    background-color: burlywood;
+  }
+  .container div:nth-child(8n) {
+    background-color: blueviolet;
+  }
+  .container div:nth-child(9n) {
+    background-color: cadetblue;
+  }
+  .container div:nth-child(10n) {
+    background-color: blueviolet;
+  }
+  .container div:nth-child(11n) {
+    background-color: cadetblue;
+  }
+  .container div:nth-child(12n) {
+    background-color: burlywood;
+  }
+
+  .container{
+      display: grid;
+      gap: 5px;
+      grid-template-columns: repeat(auto-fit, minmax(100px,1fr));/*Gridler min-max değerli verdiğinde: ilk değer minimum küçüleceği , sonraki de maksimum buyuyecegı , 1 fr kadar buyudukten sonra yanına eleman  getırır , yada yanındakı elemanı asagıya atar(responsive) */
+    grid-auto-rows: 100px;/*Aşağıya elemanlar attıgı ıcın otomatık olarak yukseklıklerı belırledık ,eğer grid template rows deseydık her bir satır ıcın yukseklık vermemız gerekecektı  */
+
+  }

@@ -1,0 +1,111 @@
+.container {
+  text-align: center;
+  font-size: 2em;
+  color: seashell;
+  display: grid; /* Grid yapısı oluşturuldu*/
+  /* grid-template-columns: 100px auto 100px; /*sayfayı 3 sutuna böl, 1.c, ve 3.cüsü 100'er px geri kadan ölçü ortanın */
+  /* -------------------------*/
+
+ /* grid-template-columns: repeat( 3,100px ); /*Böylede yazılabilir, tekrarla(3adet sütun, 100er pixsellik) */
+
+ /*---------------------*/
+
+ /*grid-template-columns: 2fr 1fr 1fr;/* Ekranın boyutu kaç olursa olsun sutun olarak böldüğünde 2parcasını 1.sutuna 1er parcalarınıda 2. ve 3. sutuna ver*/
+
+ /* ------------------------------------ */
+
+grid-template-columns: repeat(3,1fr);
+  /* grid-template-rows: 100px 100px; /*satırlarımın ölçüsü 100'er px*/
+
+
+/* ------------------------- */
+
+
+/*grid-template-rows: repeat( 2,100px ); /*Böylede yazılabilir, tekrarla(2adet satır, 100er pixsellik) */
+
+
+/*----------------------------------*/
+
+
+grid-template-rows: 1fr 1fr ;/* çalışmaz çünkü değer vermen gerekir örn : height 500 dedikten sonra 2 eşit parçaya bölebilir, */
+
+grid-template-rows: 200px 200px;
+  /*  column-gap: 10px;/*Sütun arası boşlukları*/
+  /* row-gap:10px ;/*Satır arası boşlukları */
+
+
+  /*Kısa Yazılmış hali*/ grid-template-rows: 200px 200px , repeat(3,1fr);
+  gap: 10px; /* Tüm boşluklar 10px 20px girersen ilki satır arası 2.cisi sütun arası*/
+}
+/* tüm sayfa ayarı*/
+html,
+body {
+  background-color: saddlebrown;
+  margin: 20px;
+}
+.container div:nth-child(1n) {
+  /*1.div */
+  background-color: burlywood;
+}
+.container div:nth-child(2n) {
+  background-color: blueviolet;
+}
+.container div:nth-child(3n) {
+  background-color: cadetblue;
+}
+.container div:nth-child(4n) {
+  background-color: blueviolet;
+}
+.container div:nth-child(5n) {
+  background-color: cadetblue;
+}
+.container div:nth-child(6n) {
+  background-color: burlywood;
+}
+
+
+/* 2.grid yapısı-----------------------------*/
+.container2{
+    display: grid;
+    grid-template-columns: repeat(12,1fr)/* 12 eşit parçaya böl(bootstrap)*/;
+    grid-template-rows: 40px 240px 40px; /* Üç ana parçadan oluşacak*/
+    gap:10px;
+}
+.header{
+grid-column-start: 5;/* Grid başlangıç */
+grid-column-end: 13; /*Grid Bitiş 1-12 sutun oldugu ıcın en sonkı sutun 13 */
+grid-column: 5 / 13; /*Yada bu sekılde ikisini bir yazabılırsın*/
+grid-column: 5/-1; /*İkisini bir yazabılecegın bır dıger ornek*/ /*Menunun rowunu 1den baslattıgın ıcın mecbur 5ten baslayacak  */
+
+}
+.menu{
+  grid-column: 1 /span 4;
+  grid-row: 1/3;/*Eğer row kaplayacaksa bır usttekı elemanın baslangıcı bu elementın columunun sonu olmalı */
+}
+.content{
+  grid-column: 5/-1;
+}
+.footer{
+grid-column: 1/span 12;/*Span 12 demek 12. satıra kadar kapla span 6 yarısını kapla vs. */
+}
+
+.container2 div:nth-child(1n) { /*1.div */
+    background-color: burlywood;
+  }
+.container2 div:nth-child(2n) {
+    background-color: blueviolet;
+  }
+  .container2 div:nth-child(3n) {
+    background-color: cadetblue;
+  }
+  .container2 div:nth-child(4n) {
+    background-color: blueviolet;
+  }
+ .container2 div:nth-child(5n) {
+    background-color: cadetblue;
+  }
+  .container2 div:nth-child(6n) {
+    background-color: burlywood;
+  }
+
+
