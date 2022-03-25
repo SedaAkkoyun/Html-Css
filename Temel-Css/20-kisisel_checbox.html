@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kendi Checkbox Tasarımımız</title>
+</head>
+<style>
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+.my-checkbox{
+    position: absolute;
+    left:-9999px;
+    opacity: 0;
+}
+
+.my-checkbox + label{
+    cursor:pointer;
+    display:flex;
+    align-items: center;
+    font-size:20px;
+}
+
+.my-checkbox + label::before{
+    content: '';
+    width:1.5em;
+    height: 1.5em;
+    display:inline-block;
+    border-radius: .2em;
+    margin-right: 0.5em;
+    border:.05em solid black
+}
+
+.my-checkbox + label:hover::before{
+    background-color: #0AF;
+}
+
+.my-checkbox:focus + label::before{
+    box-shadow: 0 0 20px 0 black;
+}
+
+.my-checkbox:checked + label::before{
+    content: '\2713';
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    background-color: #069;
+}
+
+.my-checkbox:disabled + label::before{
+    background-color: #ccc;
+    border-color:#999;
+}
+
+.my-checkbox:disabled + label{
+    color:#aaa;
+    cursor: not-allowed;
+}
+
+</style>
+
+<body>
+   <input class="my-checkbox" type="checkbox" disabled checked id="cb1">
+   <label for="cb1">Checkbox 1</label>
+
+   <br>
+
+   <input class="my-checkbox" type="checkbox" disabled  id="cb2">
+   <label for="cb2">Checkbox 2</label>
+
+   <br>
+
+   <input class="my-checkbox" type="checkbox"   id="cb3">
+   <label for="cb3">Checkbox 3</label>
+
+   <br>
+   <input class="my-checkbox" type="checkbox"  id="cb4">
+   <label for="cb4">Checkbox 4</label>
+</body>
+
+</html>
