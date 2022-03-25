@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Koda vermıs oldugumuz bır renk vs calısmıyorssa oncelıkle specificity değerlerini kontrol etmemiz gerekli, kod çalışma onceliği olarak görebilriiz,
+        yazdıgın herhangi bir css kuralının ustune geldiğinde cıkan  0 , 0 , 0 değerlidir değer ne kadar yuksekse kod oncelıgı o kdar yuksektır , ilk değer ıds, ikinci classlar, atributesler , üçüncü değer elementler olarak değerlendirilir. 1,0,0 en yuksektır bastakı 1ler 2  3 olarak değişir.*/
+        
+        body{/*En son tetıklenen cunku butun alanı kapsıyor*/}
+        div {}
+        div span{/*Bir sürü div span olabılecegı ıcın en son tetıklenen*/
+}
+                span{
+/*Bir sürü span olabılecegı ıcın en son tetıklenen*/
+        }
+        h2.h.hh{
+        /* sınıflar 2. kademede yer aldıgı ıcın 2. tetıklenen sınıf */
+        }
+        #h2{
+/*En yüksek spesificitye sahip alan çünkü direkt ıd tetıklenıyor*/
+        }
+
+    </style>
+</head>
+<body>
+    <h2 class="h2 h hh" id="h2">Başlık</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora vitae ab eius neque adipisci minus maxime earum doloribus sint, dolor at magni sapiente architecto, optio dolores fuga molestias excepturi non!</p>
+    <div>
+        <p></p>
+        <span>
+            <span>
+                </span></span>  </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eius iusto? Earum enim necessitatibus aperiam dignissimos, natus illo quos consequatur, nihil nostrum provident, ducimus facere possimus fugit amet minima velit?</p>
+</body>
+</html>
