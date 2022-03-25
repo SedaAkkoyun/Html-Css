@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: blue;
+            color: red;
+            font-size: 2rem;
+
+        }
+
+        .div {
+            background-color: revert;
+        }
+
+        /* can ı use sitesinden hangi komutları hangı tarayıcı desteklıyor bakabılıyoruz.
+        Revert komutunu her tarayıcı desteklemıyor */
+        @supports (background-color: revert){
+            /*Supports destekliyor mu  komutu  */
+            /* Eğer tarayıcı revert komutunu desteklıyor ise */
+            .div{
+                background-color: revert;
+            }
+            @supports not (background-color: revert){
+                /* Eğer reverti desteklemıyorsa  */
+                /* explorerda supports komutuda calısmadıgı ıcın işlemiyor */
+.div{
+    background-color:pink;
+}
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">My Div Element</div>
+</body>
+
+</html>
