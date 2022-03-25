@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 32px;
+            height: 200vh;/*2 sayfalık alan kaplıyor scrool sayfanın yarısına gelıyot*/
+            margin: 1rem;
+            border: 2px solid red;
+        }
+        .parent{
+            border: 2px solid blue;
+            padding: 2rem;
+            background-color: rgb(233, 227, 145);
+           
+        }
+        .item1{
+            padding: 2rem;
+            background-color: darkmagenta;
+            position: relative;/*Relative dediğimiz anda top, bottom, right ve left değerleri aktif hale gelir, bu değerlerle oynadıgımız takdirde alan sadece kendi içerisinde yer değiştirir*/
+           /* top:10px;/*Bulunduğu yerden 10px aşağıya gitti , diğer elemanlarında ustune gelebilir*/
+            bottom: 10px;/*mesela margin-bottom dersen diğer elemanlarıda yer değiltirir ama bu şekilde sadece item 1 yer değiştiriyor*/
+            left: 10px;
+            right: 20px;
+        }
+        .item2{
+            padding: 2rem;
+            background-color: darkorange;
+            position: absolute;/*Hiçbir elemanı görmeden bulunduğu ekranın uzerınde pozisyon alır, Ancak item2nin ana divinde ya da body içerisinde bir position:absolute yada relative ise onun içerisine konumlanır , örn : parente position:relative yazdıgımız an artık relativin içerisinde pozisyon değiştirir.*/
+            top:30px;
+            
+            right: 50px;
+            left: 10px;/*Right ve lefti verdiğimiz an iki alanada verdiğimiz değerler boyunca yayılmaya calısır */
+
+        }
+        .item3{
+            padding: 2rem;
+            background-color: darkslateblue;
+            position: fixed;/*relative gıbı davranır ancak sayfa asağıya ındıkce kendısı oldugu yerde kalmaya devam eder  */
+            top: 10px ;
+           
+
+        }
+
+        
+    </style>
+</head>
+<body>
+   <div class="parent">
+       Ana Taşıyıcı
+       <div class="item1">Item 1</div>
+       <div class="item2">Item 2</div>
+       <div class="item3">Item 3</div>
+   </div>
+</body>
+</html>
