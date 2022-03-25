@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            font-size: 2rem;
+            animation-name: isim;
+            animation-duration: 3s;
+            /* 3s sürecek animasyon */
+
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+
+        }
+        div:hover{
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+            /* animation: isim - nekadar sürecek- geçiş tipi- duraksama -Kaç kere tekrarlanacak- direction(kullanırken 1den fazla animasyonun dönmesi lazım çünkü son adımdan sonra tekrar ilk adıma geç diyoruz kendini sıfırlamadan anımasyonu surduruyor) - Duraksama olurken from otomatik gelsin yada hover işlemi birmeden to birmesin gibi modlar; */
+
+            /* animation: renk-degis 4s ease-in-out 1s infinite ; */
+
+            /* Rengi 4s boyunca ease-in-out komutu ile 1sn bekleyerek mousela üstüne bastıgımız sürece değiştir */
+
+            /* animation: renk-degis 4s ease-in-out 1s 2 alternate ; */
+            /* Kırmızıdan maviye maviden tekrar kırmızıya dön sonlandır(alternate) */
+
+            /* animation: renk-degis 4s ease-in-out 1s forwards ; */
+            /* En son blueda kal */
+
+            /* animation: renk-degis 4s ease-in-out 1s backwards ; */
+            /* En son blueda kal ama 1s bekleme sürecinde ilk renk olan kırmıza bekle */
+
+            animation: renk-degis 3s ease-in-out 1s 2 both alternate,
+            boyut-degis 3s ease-in-out 1s 2 both alternate;
+            /* Backwards ve forwards ikisinide davranır both */
+            animation-play-state: paused;
+            /*Animasyonu tıklndıgında başlat*/
+        }
+        @keyframes renk-degis{
+            from{
+                /* animasyon başladıgında */
+                background-color: red;
+
+            }
+            50%{
+/* Animasyonun ortasında istersen arttırabılırsın 70% 20%vs */
+            }
+            to{
+                /* Animasyonun sonunda */
+                background-color: blue;
+            }
+        }
+    @keyframes boyut-degis {
+        to{
+            width: 300px;
+            height: 300px;
+        }
+        
+    }
+    </style>
+</head>
+<body>
+    <div>Div</div>
+</body>
+</html>
