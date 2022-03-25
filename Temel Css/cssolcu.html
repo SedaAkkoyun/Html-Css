@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            /*  background-color: orange;*/
+            width: 50%;
+            /* height: 500px;*/
+            border: 3px solid black;
+
+        }
+
+        .div2 {
+            background-color: rgb(255, 0, 0);
+            height: 100px;
+            margin: 10px 0;
+        }
+
+        .div-Vw-Vh {
+            background-color: orange;
+            width: 50vw;
+            /* View Width Yani ekran %50si*/
+            height: 30vh;
+
+        }
+
+        .anadiv {
+            font-size: 30px;
+        }
+
+        .yazi-rem {
+            font-size: 2rem;
+            /*Ana divin içindeki yazı fontunu görmez varsayılan font boyutu olan 16pxi görür onun 2 katını alır , Boylelıkle google ayarlardan font boyutunu yada cozunurlugunu büyük yapan birisinin otomatık yazısını buyutur. Ayar hassasıyetı vardır*/
+        }
+
+        .yazi2-em {
+            font-size: 2em;
+            /* Ana divin font boyutunun iki katını alır */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-VW-Vh">safdad</div>
+    <div class="div1">
+        <!-- dış kenarlık divi içine altıkların karesini aşağıdaki div kurallarına verıyorsun-->
+        <div class="div2"></div><!-- Heighti buna vermen laızm çünkü çerçeven,n buna göre şekillenmesi gerekli -->
+        <div class="div2"></div>
+
+    </div>
+    <div class="anadiv">
+        <div class="yazi-rem">Bu yazı rem ile düzenlendi</div>
+        <div class="yazi2-em">Bu yazı em ile düzenlendi</div>
+    </div>
+
+
+
+</body>
+
+</html>
