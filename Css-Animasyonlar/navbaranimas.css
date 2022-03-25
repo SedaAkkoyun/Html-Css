@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --bgcolor--: #333;
+  --textcolor--: white;
+  /* Değişkenler tanımlandı */
+}
+body {
+  background-color: var(--bgcolor--);
+  font-size: 2rem;
+  color: var(--textcolor--);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu a{
+    position: relative;
+    padding: .5rem;
+    display: block;
+ 
+}
+.menu a::before{
+    content: '';
+    background-color: yellowgreen;
+    position: absolute;
+    /* alttaki çizgiyi oluşturabilmemiz için a etiketine göre serbest konumlandırıldı */
+    width: 100%;
+    /* 100% dediğimizde absolute oldugu ıcın relatıve'i olan a etiketinin %100 lük alanı kadar çizgi oluşturdu */
+    height: 3px;
+    
+    left: 0;
+    bottom: 0;
+
+    /* En soldan başlaması ve yazının aşağısına konumlanması ayarlandı çok iç içe girmemesi için a'ya padding verildi */
+
+
+    transform: scaleX(0);
+    /* İlk aşamada çizgi görünmeyecek üzerine gelince ekrana yansıyacak */
+    transition: 1s ease-in-out;
+    /* Çizgi geçisi 1sn olacak */
+    transform-origin: left;
+    /* Çizgi geçisi soldan başlayacak */
+    
+}
+.menu a:hover::before{
+    transform: scaleX(1);
+    /* Çizgi gösterildi */
+}
+.tpright a::before{
+    transform-origin: right;
+    /* Çizgi geçisi sağdan başlayacak */
+    /* Bu classtaki html koduna aynı zamanda .menu clasını tanımladıgımız ıcın dığer aynı ozellıklerı yazmamıza gerek kalmadı */
+}
+.center a::before{
+    transform-origin: center;
+    /* Çizgi geçisi ortadan başlayacak */
+
+}
+.ozel a::before{
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: 0.5s ease-in-out;
+}
+.ozel a:hover::before{
+
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: ease-in-out;
+    /* daha farklı bir geçiş istedik hover bittikten sonra normalde eski haline dönerken ilk haline geçiyordu (a::before hali),
+    bundan dolayı before halinin yönünü tam tersi tanımlandı  */
+}
