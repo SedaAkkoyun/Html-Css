@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body
+{
+background-color: red; /*  arkaplanrengi */
+background-repeat: no-repeat; /* görsel tekrarlama */ 
+background-size: 50% 100%; /* arkaplan gçrsel boyut yüzdesi */ 
+background-attachment: fixed; /* görsele göre sayfayı ayarlar */ 
+
+}
+
+</style>
+<body>
+
+    <picture>
+        <!--Eğer sayfa boyutu 600 px ve üzerindeyse srcset'deki görseli göster -->
+        <source media="(min-width:600px)" srcset="https://images.pexels.com/photos/4331891/pexels-photo-4331891.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> 
+        <!--Eğer sayfa boyutu 200 px ve üzerindeyse srcset'deki görseli göster -->
+        <source media="(min-width:200px)" srcset="https://images.pexels.com/photos/10013070/pexels-photo-10013070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        <!--Tarayıcının pictureu desteklemedıgı durumlarda aşağıdaki kodu çalıştır. -->
+        <img src="https://images.pexels.com/photos/7326717/pexels-photo-7326717.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="deneme">
+    </picture>
+    
+</body>
+</html>
