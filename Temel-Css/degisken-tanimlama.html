@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root
+W
+        /*Değişken tanımlamak için kullanacagımız clas*/
+            {
+            --ana-renk: red;
+            /*Değişken tanımlamak için başına '--' koyman gereklidir */
+            /*Değişken tanımlamakta ki asıl amaç renkleri yada herhangi bir özelliği verdiğin nesnelerde sonradan degısıklık yapacagında toplu olarak değiştirebiliyor olman*/
+            --border: 2px solid red;
+
+        }
+
+        h2 {
+            background-color: orange;
+            padding: 2rem;
+            color: var(--ana-renk);
+        }
+
+        p {
+            color: var(--ana-renk);
+            border: var(--border);
+        }
+        .p2{
+--ana-renk:black; /*Sadece bulundugu alanın kuralını ezer diğer classları etkılemez*/
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Başlık</h2>
+    <p>Paragraf Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia fuga iure hic quaerat deserunt, nam,
+        enim sequi blanditiis asperiores error dignissimos libero natus consequuntur, et soluta? Soluta reprehenderit
+        necessitatibus non.
+        Aperiam ducimus numquam odit nulla ex doloremque esse consequuntur labore sunt rerum eum beatae totam voluptatum
+        doloribus, fugiat tempore rem excepturi mollitia necessitatibus amet. Quis quas nisi ipsa assumenda enim.
+    </p>
+    <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem optio soluta laborum fugiat qui, cum
+        iusto laudantium blanditiis distinctio facere saepe quas iure dolore animi ex odit nostrum inventore velit?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem optio soluta laborum fugiat qui, cum
+            iusto laudantium blanditiis distinctio facere saepe quas iure dolore animi ex odit nostrum inventore velit?</p>
+</body>
+
+</html>
