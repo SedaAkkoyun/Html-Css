@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-letter{/*Pnin ilk harfini büyük yap*/
+            font-size: 6rem;
+        }
+        p::first-line{/* ilk satır rengi , Normal sartlarda texte değilde box bc yaptıgımızda yazıya gore arkaplan uzamaz */
+            background-color: blueviolet;
+        }
+        p::selection{/*Yazıyı sectıgınde kı renk*/
+            background-color: red;
+            color: white;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box::before{/*Bu kutudan öncesi demek değil ilgili div içerisinde verdiğin elemanlardan öncesi*/
+            display: block;/*yaptıgın yada koydugun her hangı bırseyın block ya da inline oldugunu tanımlaman gereklı*/
+            width: 10px;
+            height: 10px;
+            background-color: yellow;
+            content: '';
+
+        }
+        .box::after{
+            content: 'By';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        Seda
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni earum excepturi placeat sequi odit hic, molestias reprehenderit ipsum ratione ullam qui neque ex cupiditate, officia accusantium doloremque, aut cumque inventore?</p>
+</body>
+</html>
